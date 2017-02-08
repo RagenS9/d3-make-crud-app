@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+}
+
+/*grid*/
+body, .icons, section {
+    display: flex;
+}
+
+body, section {
+    flex-direction: column;
+}
+
+header, main, .icons, section > div {
+    flex: 1;
+}
+
+/*header*/
+header {
+    padding: 60px 20px 20px 20px;
+    /*he generally doesn't use responsive width with padding. use px. */
+    background: blue;
+    color: white;
+    text-align: center;
+    /*text-align: center will impact the image, too. */
+
+
+}
+header > img {
+    border-radius: 50%;
+    max-width: 250px;
+    box-shadow: 5px 5px 5px blue;
+}
+
+header > h5 {
+    text-transform: uppercase;
+    /*check it out! this uppercase thing turns them all upper case. can do lower case. small caps. capitalize.*/
+    opacity: .5;
+}
+
+header > h1 > span {
+    font-weight: normal;
+}
+
+header > button {
+    /*this is commonly called an outline button . . . make it transparent to take the container's color*/
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    background: transparent;
+}
+
+header > .icons a {
+    color: white;
+}
+header > .icons > div:first-child {
+    text-align: left;
+}
+header > .icons > div:last-child {
+    text-align: right;
+}
+
+/*main*/
+main { 
+    padding: 60px 20px 20px 20px;
+}
+
+/*calling something section without a class works here because we only have one level of sections. if you had sections without sections, you would need to name things. */
+main > section h5 {
+    text-transform: uppercase;
+    color: blue;
+    font-weight: bold;
+    margin: 0;
+}
+
+main > section p {
+    line-height: 30px;
+}
+
+main >section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+main li {
+    font-weight: bold;
+    line-height: 40px;
+}
+
+main li > .fa {
+    color: blue;
+    margin-right: 20px;
+    font-size: 10px;
+    /*font awesome Examples tab has some examples for how to size things.*/
+}
+
+main h4 {
+    text-transform: uppercase;
+}
+
+main h4 > .fa {
+    color: blue;
+    margin-left: 20px;
+}
+
+/*tablet*/
+@media all and (min-width: 767px) {
+    body {
+        flex-direction: row;
+    }
+}
+
+/*laptop*/
+@media all and (min-width: 991px) {
+    section {
+        flex-direction: row;
+    }
+
+    section > div:first-child {
+        flex: 3;
+    }
+
+    section > div:last-child {
+        flex: 9;
+    }
+}

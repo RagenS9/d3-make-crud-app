@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/global.css" />
+</head>
+<body>
+
+    <div class="container">
+        <!--container centers things and puts restraints. built into bootstrap-->
+       <!--only use container if you need it. -->
+        <div class="row">
+
+            <div class="col-sm-6 col-sm-offset-3 well">
+                <!--set the size in the class. here it will be 6 col for small screens and then will be full for larger screens. we didn't say what it should be for extra small (mobile) devices, and it will default to being stacked as one column instead of having the columns of content in a row side by side.
+                
+                to make it variable, do things like: 
+                div class="col-xs-8 col-sm-6 col-md-10"
+                div class="col-xs-4 col-sm-6 col-md-2" 
+                and now it knows when to jump up to bigger sizes of columns. But if adding offsets, remember to add that into the 12:
+                col-sm-6 col-sm-offset-3 well
+                but if you did something like "col-sm-6 col-sm-offset-6 well", it won't be centered anymore' 
+
+                offset means it's been shifted three columns over from the left. and it automatically does three on both sides. = 12 col, centering the content. -->
+                <!--"well" adds a gray box with slightly rounded corners.-->
+
+
+                <h1 class="text-center">Hello.</h1>
+
+                <form method="post" action="https://thinksaydo.com/submit.php">
+                
+                    <div class="form-group">
+                        <label for="name">My Name Is</label>
+                        <input type="text" id="name" name="name" class="form-control" />
+                        <!--the name="full_name" states what it will be named in the backend. -->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <textarea id="email" name="email_address" class="form-control"></textarea>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button class="btn btn-success btn-block">Send it now!</button>
+                    </div>
+
+                </form>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
